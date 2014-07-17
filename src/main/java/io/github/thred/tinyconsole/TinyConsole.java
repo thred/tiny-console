@@ -10,7 +10,7 @@ public class TinyConsole
         start(false);
     }
 
-    private static void start(boolean daemon)
+    public static void start(boolean daemon)
     {
         shell = new Shell(System.in, System.out, System.err);
 

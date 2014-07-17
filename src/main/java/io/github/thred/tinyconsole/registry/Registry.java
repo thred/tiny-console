@@ -22,16 +22,12 @@ import java.util.List;
 public class Registry
 {
 
-    public static final Registry INSTANCE = new Registry();
+    private static final List<Class<?>> pendingTypes = new ArrayList<Class<?>>();
+    private static final List<Class<?>> processingTypes = new ArrayList<Class<?>>();
+    private static final List<Object> instances = new ArrayList<Object>();
 
-    private final List<Class<?>> pendingTypes = new ArrayList<Class<?>>();
-    private final List<Class<?>> processingTypes = new ArrayList<Class<?>>();
-    private final List<Object> instances = new ArrayList<Object>();
-
-    private Registry()
+    static
     {
-        super();
-
         try
         {
             registerContributions();
@@ -42,11 +38,11 @@ public class Registry
         }
     }
 
-    protected void registerContributions() throws IOException, ClassNotFoundException
+    protected static void registerContributions() throws IOException, ClassNotFoundException
     {
         Collection<String> contributions = new LinkedHashSet<String>();
         Enumeration<URL> resources =
-            getClass().getClassLoader().getResources("META-INF/services/" + getClass().getName());
+            Registry.class.getClassLoader().getResources("META-INF/services/" + Registry.class.getName());
 
         while (resources.hasMoreElements())
         {
@@ -74,7 +70,7 @@ public class Registry
      * 
      * @param type the type
      */
-    public void register(Class<?> type)
+    public static void register(Class<?> type)
     {
         pendingTypes.add(type);
     }
@@ -84,13 +80,13 @@ public class Registry
      * 
      * @param instance the instance of the service
      */
-    public void register(Object instance)
+    public static void register(Object instance)
     {
         instances.add(instance);
     }
 
     @SuppressWarnings("unchecked")
-    public <TYPE> Instances<TYPE> resolve(Class<TYPE> type)
+    public static <TYPE> Instances<TYPE> resolve(Class<TYPE> type)
     {
         Instances<TYPE> result = new Instances<TYPE>(type);
 
@@ -107,7 +103,7 @@ public class Registry
         return result;
     }
 
-    protected <TYPE> void processPending(Class<TYPE> type)
+    protected static <TYPE> void processPending(Class<TYPE> type)
     {
         if (pendingTypes.isEmpty())
         {
@@ -127,7 +123,7 @@ public class Registry
     }
 
     @SuppressWarnings("unchecked")
-    protected <TYPE> TYPE instantiate(Class<TYPE> type)
+    protected static <TYPE> TYPE instantiate(Class<TYPE> type)
     {
         synchronized (pendingTypes)
         {

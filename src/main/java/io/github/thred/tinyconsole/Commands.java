@@ -13,7 +13,7 @@ public class Commands
 
     public static Command find(String name)
     {
-        Instances<Command> instances = Registry.INSTANCE.resolve(Command.class);
+        Instances<Command> instances = Registry.resolve(Command.class);
 
         for (Command command : instances)
         {
@@ -33,7 +33,7 @@ public class Commands
 
     public static Collection<Command> list()
     {
-        List<Command> result = Registry.INSTANCE.resolve(Command.class).toList();
+        List<Command> result = Registry.resolve(Command.class).toList();
 
         Collections.sort(result, new Comparator<Command>()
         {
