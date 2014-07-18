@@ -27,6 +27,8 @@ public class Parser
             switch (token.getType())
             {
                 case END_OF_FILE:
+                    return null;
+                    
                 case END_OF_LINE:
                 case SEPARATOR:
                     return new Arguments(tokens);

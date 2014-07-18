@@ -27,7 +27,7 @@ public class HelpCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "[command {args}]";
+        return "[command [arg ...]]";
     }
 
     @Override

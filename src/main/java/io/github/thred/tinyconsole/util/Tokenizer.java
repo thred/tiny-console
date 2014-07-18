@@ -87,7 +87,7 @@ public class Tokenizer
             builder.append((char) ch);
 
             ch = scanner.lookAhead();
-
+ 
             if ((ch == ' ') || (ch == '\n') || (ch == ';'))
             {
                 return new Token(Token.Type.COMMAND, line, column, builder.toString());
@@ -95,11 +95,6 @@ public class Tokenizer
 
             ch = scanner.next();
         }
-    }
-
-    public void close() throws IOException
-    {
-        scanner.close();
     }
 
     protected static boolean isWhitespace(char ch)

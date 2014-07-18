@@ -6,7 +6,7 @@ import io.github.thred.tinyconsole.util.Utils;
 
 /**
  * Exits the JVM.
- * 
+ *  
  * @author Manfred Hantschel
  */
 public class ExitCommand extends AbstractCommand
@@ -38,7 +38,7 @@ public class ExitCommand extends AbstractCommand
     @Override
     public int getOrdinal()
     {
-        return 10010;
+        return 590;
     }
 
     @Override

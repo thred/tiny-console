@@ -5,6 +5,7 @@ io.github.thred.tinyconsole.command.HelpCommand
 io.github.thred.tinyconsole.command.MemoryCommand
 io.github.thred.tinyconsole.command.PipeCommand
 io.github.thred.tinyconsole.command.PropCommand
+io.github.thred.tinyconsole.command.ShellCommand 
 io.github.thred.tinyconsole.command.SleepCommand
 io.github.thred.tinyconsole.command.SnackCommand
 io.github.thred.tinyconsole.command.ThreadCommand

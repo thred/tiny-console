@@ -27,8 +27,8 @@ public class ThreadCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "{<ID>}";
-    }
+        return "[id ...]";
+    } 
 
     @Override
     public String getDescription()
@@ -39,9 +39,9 @@ public class ThreadCommand extends AbstractCommand
     @Override
     protected String getHelpDescription()
     {
-        return "Displays information gathered form threads. If the command is invoked without an <ID>, "
-            + "a summary of all threads will be displayed. If the command is invoked with an <ID> (as thread id), "
-            + "detail information of the thread will be displayed. You can use * as <ID> to display detail information "
+        return "Displays information gathered form threads. If the command is invoked without an id, "
+            + "a summary of all threads will be displayed. If the command is invoked with an id (as thread id), "
+            + "detail information of the thread will be displayed. You can use * as id to display detail information "
             + "of all threads.";
     }
 

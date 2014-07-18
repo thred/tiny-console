@@ -20,9 +20,9 @@ public class SleepCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "<SECONDS>";
+        return "seconds";
     }
-
+ 
     @Override
     public String getDescription()
     {
@@ -32,7 +32,7 @@ public class SleepCommand extends AbstractCommand
     @Override
     public int getOrdinal()
     {
-        return 1500;
+        return 580;
     }
 
     @Override

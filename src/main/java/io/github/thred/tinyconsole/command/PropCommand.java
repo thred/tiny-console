@@ -23,9 +23,9 @@ public class PropCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "[<KEY> [<VALUE>]]";
+        return "[key [value]]";
     }
-
+ 
     @Override
     public String getDescription()
     {

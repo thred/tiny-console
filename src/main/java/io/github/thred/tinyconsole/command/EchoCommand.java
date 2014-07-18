@@ -4,7 +4,7 @@ import io.github.thred.tinyconsole.AbstractCommand;
 import io.github.thred.tinyconsole.Process;
 
 /**
- * Prints text.
+ * Prints text. 
  * 
  * @author Manfred Hantschel
  */
@@ -19,7 +19,7 @@ public class EchoCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "{<TEXT>}";
+        return "[text ...]";
     }
 
     @Override

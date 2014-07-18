@@ -91,7 +91,7 @@ public class Scanner
     }
 
     protected int read() throws IOException
-    {
+    { 
         int ch = reader.read();
 
         if ((ch == '\n') && (skipLF))
@@ -108,10 +108,5 @@ public class Scanner
         }
 
         return ch;
-    }
-
-    public void close() throws IOException
-    {
-        reader.close();
     }
 }

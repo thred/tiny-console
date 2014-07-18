@@ -22,8 +22,8 @@ public class MemoryCommand extends AbstractCommand
     @Override
     public String getFormat()
     {
-        return "[gc]";
-    }
+        return "[-gc]";
+    } 
 
     @Override
     public String getDescription()
@@ -34,7 +34,7 @@ public class MemoryCommand extends AbstractCommand
     @Override
     protected String getHelpDescription()
     {
-        return "Prints memory information to the console. If invoked with the gc command, it "
+        return "Prints memory information to the console. If invoked with the -gc command, it "
             + "performs a garbage collection.";
     }
 
@@ -56,7 +56,7 @@ public class MemoryCommand extends AbstractCommand
             return 0;
         }
 
-        if ("gc".equalsIgnoreCase(command))
+        if ("-gc".equalsIgnoreCase(command))
         {
             return gc(process, freeMemory);
         }

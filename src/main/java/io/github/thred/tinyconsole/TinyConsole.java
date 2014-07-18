@@ -1,6 +1,10 @@
 package io.github.thred.tinyconsole;
 
-public class TinyConsole
+import java.io.File;
+
+import io.github.thred.tinyconsole.util.Arguments;
+
+public class TinyConsole 
 {
 
     private static Shell shell;
@@ -13,6 +17,13 @@ public class TinyConsole
     public static void start(boolean daemon)
     {
         shell = new Shell(System.in, System.out, System.err);
+
+        File file = new File("autostart.script");
+
+        if (file.exists())
+        {
+            shell.execute(new Arguments("shell", file.getPath()));
+        }
 
         shell.start(daemon);
     }
