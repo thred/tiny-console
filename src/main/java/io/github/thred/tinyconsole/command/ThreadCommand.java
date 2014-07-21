@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Prints thread information
- * 
+ *
  * @author Manfred Hantschel
  */
 public class ThreadCommand extends AbstractCommand
@@ -28,7 +28,7 @@ public class ThreadCommand extends AbstractCommand
     public String getFormat()
     {
         return "[id ...]";
-    } 
+    }
 
     @Override
     public String getDescription()
@@ -146,7 +146,7 @@ public class ThreadCommand extends AbstractCommand
         List<Thread> threads = new ArrayList<Thread>(Thread.getAllStackTraces().keySet());
 
         Collections.sort(threads, new Comparator<Thread>()
-        {
+            {
 
             @Override
             public int compare(Thread o1, Thread o2)
@@ -154,7 +154,7 @@ public class ThreadCommand extends AbstractCommand
                 return (int) (o1.getId() - o2.getId());
             }
 
-        });
+            });
 
         return threads;
     }

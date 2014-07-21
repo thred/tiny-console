@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
 /**
  * Redirects output.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class PipeCommand extends AbstractCommand

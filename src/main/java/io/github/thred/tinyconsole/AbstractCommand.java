@@ -5,7 +5,7 @@ import io.github.thred.tinyconsole.util.WordWrap;
 
 /**
  * Abstract base implementation of a {@link Command}.
- * 
+ *
  * @author Manfred Hantschel
  */
 public abstract class AbstractCommand implements Command
@@ -15,7 +15,7 @@ public abstract class AbstractCommand implements Command
 
     /**
      * Creates the command using the specified names.
-     * 
+     *
      * @param names the names
      */
     public AbstractCommand(String... names)
@@ -62,7 +62,7 @@ public abstract class AbstractCommand implements Command
 
     /**
      * Return the detailed description of the command. The result will get word wrapped.
-     * 
+     *
      * @return the detailed description
      */
     protected abstract String getHelpDescription();

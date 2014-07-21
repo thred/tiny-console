@@ -6,7 +6,7 @@ import io.github.thred.tinyconsole.Process;
 
 /**
  * Prints text.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class SleepCommand extends AbstractCommand
@@ -22,7 +22,7 @@ public class SleepCommand extends AbstractCommand
     {
         return "seconds";
     }
- 
+
     @Override
     public String getDescription()
     {

@@ -9,7 +9,7 @@ import java.util.Properties;
 
 /**
  * Prints and modifies properties.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class PropCommand extends AbstractCommand
@@ -25,7 +25,7 @@ public class PropCommand extends AbstractCommand
     {
         return "[key [value]]";
     }
- 
+
     @Override
     public String getDescription()
     {

@@ -2,7 +2,7 @@ package io.github.thred.tinyconsole.util;
 
 /**
  * Provides word wrap functionality.
- * 
+ *
  * @author Manfred Hantschl
  * @author Thomas Moser
  */
@@ -25,7 +25,7 @@ public final class WordWrap
 
     /**
      * Defines the character to indicate a cut position (after the character)
-     * 
+     *
      * @param c the character
      * @return the instance
      */
@@ -42,7 +42,7 @@ public final class WordWrap
     /**
      * Defines the character to indicate a position with not cut-ability (after the character). Default is: all letters,
      * all digits and "'!$%()[]{}?.,:;
-     * 
+     *
      * @param c the character
      * @return the instance
      */
@@ -64,7 +64,7 @@ public final class WordWrap
 
     /**
      * Defines the width of one tab, default is 8
-     * 
+     *
      * @param withTabWidth the width of one tab
      * @return the instance
      */
@@ -77,7 +77,7 @@ public final class WordWrap
 
     /**
      * Sets the line separator, default is defined by OS
-     * 
+     *
      * @param withLineSeparator the line separator
      * @return the instance
      */
@@ -91,7 +91,7 @@ public final class WordWrap
     /**
      * Performs a wordwrap on the text. The operation is thread-safe. You can use one {@link WordWrap} instance with the
      * same configuration for multiple threads.
-     * 
+     *
      * @param text the text
      * @param length the length of each line
      * @return the warped text

@@ -1,10 +1,10 @@
 package io.github.thred.tinyconsole;
 
-import java.io.File;
-
 import io.github.thred.tinyconsole.util.Arguments;
 
-public class TinyConsole 
+import java.io.File;
+
+public class TinyConsole
 {
 
     private static Shell shell;
@@ -18,7 +18,7 @@ public class TinyConsole
     {
         shell = new Shell(System.in, System.out, System.err);
 
-        File file = new File("autostart.script");
+        File file = new File(".autostart");
 
         if (file.exists())
         {

@@ -8,7 +8,7 @@ import io.github.thred.tinyconsole.util.Utils;
 
 /**
  * Prints memory usage.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class MemoryCommand extends AbstractCommand
@@ -23,7 +23,7 @@ public class MemoryCommand extends AbstractCommand
     public String getFormat()
     {
         return "[-gc]";
-    } 
+    }
 
     @Override
     public String getDescription()

@@ -9,7 +9,7 @@ import java.io.PrintStream;
 /**
  * Each {@link Command} or list of {@link Command}s will be executed within a process. The process holds the in/out
  * streams, the arguments and so on.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class Process
@@ -36,7 +36,7 @@ public class Process
 
     /**
      * Creates a new process with the same properties, but different streams.
-     * 
+     *
      * @param in the in stream
      * @param out the out stream
      * @param err the error stream
@@ -49,7 +49,7 @@ public class Process
 
     /**
      * Execute the process. Parses the arguments and launches the command in the same or a dedicated child process.
-     * 
+     *
      * @return the result of the command
      */
     public int execute()
@@ -68,7 +68,7 @@ public class Process
 
     /**
      * The result of the command.
-     * 
+     *
      * @return the result
      */
     public int getResult()
@@ -103,7 +103,7 @@ public class Process
 
     /**
      * Executes the process, handles errors.
-     * 
+     *
      * @param process the process to be executed
      * @return the result of the command
      */
@@ -141,7 +141,7 @@ public class Process
 
     /**
      * Executes the specified command using the specified process.
-     * 
+     *
      * @param process the process
      * @param commandName the name of the command
      * @return the result of the command

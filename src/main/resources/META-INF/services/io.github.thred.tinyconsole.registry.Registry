@@ -1,4 +1,5 @@
 io.github.thred.tinyconsole.command.AmpersandCommand
+io.github.thred.tinyconsole.command.CronCommand
 io.github.thred.tinyconsole.command.ExitCommand
 io.github.thred.tinyconsole.command.EchoCommand
 io.github.thred.tinyconsole.command.HelpCommand
@@ -9,3 +10,5 @@ io.github.thred.tinyconsole.command.ShellCommand
 io.github.thred.tinyconsole.command.SleepCommand
 io.github.thred.tinyconsole.command.SnackCommand
 io.github.thred.tinyconsole.command.ThreadCommand
+
+io.github.thred.tinyconsole.util.cron.CronDaemon

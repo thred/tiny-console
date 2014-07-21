@@ -1,14 +1,14 @@
 package io.github.thred.tinyconsole;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-
 import io.github.thred.tinyconsole.util.Arguments;
 import io.github.thred.tinyconsole.util.Parser;
 import io.github.thred.tinyconsole.util.Scanner;
 import io.github.thred.tinyconsole.util.Tokenizer;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 
 /**
  * A command line interpreter - parses the input, creates process and executes them.

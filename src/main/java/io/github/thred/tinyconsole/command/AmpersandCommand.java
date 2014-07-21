@@ -6,7 +6,7 @@ import io.github.thred.tinyconsole.util.Utils;
 
 /**
  * Executes a process asynchoniously.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class AmpersandCommand extends AbstractCommand
@@ -56,7 +56,7 @@ public class AmpersandCommand extends AbstractCommand
                 }
             }
 
-        }, "Shepp Sub-Process");
+        }, "Shell Sub-Process");
 
         thread.start();
 

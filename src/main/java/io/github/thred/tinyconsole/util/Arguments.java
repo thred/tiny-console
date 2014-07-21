@@ -11,10 +11,10 @@ import java.util.List;
 /**
  * Accessor for arguments. Placeholders in the arguments will automatically be resolved. The common concept is, that
  * when consuming an argument, it will be removed.
- * 
+ *
  * @author Manfred Hantschel
  */
-public class Arguments implements Iterable<String>
+public class Arguments implements Iterable<String>, Cloneable
 {
 
     private final List<String> args;
@@ -31,9 +31,15 @@ public class Arguments implements Iterable<String>
         this.args = args;
     }
 
+    @Override
+    public Arguments clone()
+    {
+        return new Arguments(new ArrayList<String>(args));
+    }
+
     /**
      * Adds an argument at the end of the list of arguments
-     * 
+     *
      * @param argument the argument
      * @return the {@link Arguments} itself
      */
@@ -44,7 +50,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Adds an argument at the specified index
-     * 
+     *
      * @param index the index
      * @param argument the argument
      * @return the {@link Arguments} itself
@@ -58,7 +64,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Returns true if no argument is available (anymore).
-     * 
+     *
      * @return true if empty
      */
     public boolean isEmpty()
@@ -68,7 +74,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Returns the number of (remaining) arguments.
-     * 
+     *
      * @return the number of (remaining) arguments
      */
     public int size()
@@ -78,7 +84,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Returns the first index of one of the specified arguments.
-     * 
+     *
      * @param keys the arguments
      * @return the first index, -1 if none was found
      */
@@ -101,7 +107,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Returns the last index of one of the specified arguments.
-     * 
+     *
      * @param keys the arguments
      * @return the last index, -1 if none was found
      */
@@ -124,7 +130,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see java.lang.Iterable#iterator()
      */
     @Override
@@ -134,9 +140,20 @@ public class Arguments implements Iterable<String>
     }
 
     /**
+     * Returns a new {@link Arguments} object with all arguments, starting at the current index. The arguments will be
+     * removed from the original list of arguments.
+     *
+     * @return a new {@link Arguments} object
+     */
+    public Arguments consume()
+    {
+        return consume(0);
+    }
+
+    /**
      * Returns a new {@link Arguments} object with all arguments, starting at the specified index. The arguments will be
      * removed from the original list of arguments.
-     * 
+     *
      * @param startIndex the start index
      * @return a new {@link Arguments} object
      */
@@ -154,7 +171,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the first arguments as string.
-     * 
+     *
      * @return the first argument as string, null if there is no argument
      */
     public String consumeString()
@@ -164,7 +181,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the argument at the specified index as string.
-     * 
+     *
      * @param index the index
      * @return the argument at the specified index as string, null if the index is out of bounds.
      */
@@ -185,7 +202,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Searches for the specified argument. If found, removes it and returns and removes the next argument.
-     * 
+     *
      * @param key the argument
      * @return the value part (next argument), null if key was not found
      */
@@ -210,7 +227,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the first arguments as long.
-     * 
+     *
      * @return the first argument as long, null if there is no argument
      */
     public Long consumeLong()
@@ -220,7 +237,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the argument at the specified index as long.
-     * 
+     *
      * @param index the index
      * @return the argument at the specified index as long, null if the index is out of bounds.
      */
@@ -245,7 +262,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Searches for the specified argument. If found, removes it and returns and removes the next argument.
-     * 
+     *
      * @param key the argument
      * @return the value part (next argument), null if key was not found
      */
@@ -270,7 +287,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the first arguments as double.
-     * 
+     *
      * @return the first argument as double, null if there is no argument
      */
     public Double consumeDouble()
@@ -280,7 +297,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the argument at the specified index as double.
-     * 
+     *
      * @param index the index
      * @return the argument at the specified index as double, null if the index is out of bounds.
      */
@@ -305,7 +322,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Searches for the specified argument. If found, removes it and returns and removes the next argument.
-     * 
+     *
      * @param key the argument
      * @return the value part (next argument), null if key was not found
      */
@@ -330,7 +347,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the first arguments as file.
-     * 
+     *
      * @return the first argument as file, null if there is no argument
      */
     public File consumeFile()
@@ -340,7 +357,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Removes and returns the argument at the specified index as long.
-     * 
+     *
      * @param index the index
      * @return the argument at the specified index as long, null if the index is out of bounds.
      */
@@ -353,7 +370,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Searches for the specified argument. If found, removes it and returns and removes the next argument.
-     * 
+     *
      * @param key the argument
      * @return the value part (next argument), null if key was not found
      */
@@ -366,7 +383,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * Consumes the specified argument.
-     * 
+     *
      * @param flag the argument
      * @return true if the argument was found, false otherwise.
      */
@@ -377,7 +394,7 @@ public class Arguments implements Iterable<String>
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see java.lang.Object#toString()
      */
     @Override

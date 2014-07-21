@@ -2,7 +2,7 @@ package io.github.thred.tinyconsole;
 
 /**
  * Common exceptions with arguments.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class ArgumentException extends ProcessException

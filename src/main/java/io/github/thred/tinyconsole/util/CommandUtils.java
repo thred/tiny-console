@@ -4,7 +4,7 @@ import io.github.thred.tinyconsole.Command;
 
 /**
  * Common utils for the {@link Command}s
- * 
+ *
  * @author Manfred Hantschel
  */
 public class CommandUtils
@@ -12,7 +12,7 @@ public class CommandUtils
 
     /**
      * Creates a nicly formatted description of the command.
-     * 
+     *
      * @param command the command
      * @param withFormat true to add the format descriptor
      * @return the description of the command
@@ -41,7 +41,7 @@ public class CommandUtils
 
     /**
      * Returns the format description with the first name.
-     * 
+     *
      * @param command the command
      * @return the format description
      */

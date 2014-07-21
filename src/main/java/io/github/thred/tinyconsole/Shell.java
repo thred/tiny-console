@@ -56,7 +56,7 @@ public class Shell extends CLI implements Runnable
     }
 
     /**
-     * {@inheritDoc} 
+     * {@inheritDoc}
      *
      * @see java.lang.Runnable#run()
      */

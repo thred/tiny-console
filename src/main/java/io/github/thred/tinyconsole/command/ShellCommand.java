@@ -1,13 +1,13 @@
 package io.github.thred.tinyconsole.command;
- 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 
 import io.github.thred.tinyconsole.AbstractCommand;
 import io.github.thred.tinyconsole.ArgumentException;
 import io.github.thred.tinyconsole.CLI;
 import io.github.thred.tinyconsole.Process;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 /**
  * Exits the JVM.

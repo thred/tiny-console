@@ -6,7 +6,7 @@ import io.github.thred.tinyconsole.util.Utils;
 
 /**
  * Exits the JVM.
- *  
+ * 
  * @author Manfred Hantschel
  */
 public class ExitCommand extends AbstractCommand

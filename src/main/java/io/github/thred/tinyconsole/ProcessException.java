@@ -2,7 +2,7 @@ package io.github.thred.tinyconsole;
 
 /**
  * Root {@link RuntimeException} for processes and commands.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class ProcessException extends RuntimeException

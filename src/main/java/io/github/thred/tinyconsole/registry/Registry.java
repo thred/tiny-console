@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * A global implementation of a registry, that holds instances of classes (services).
- * 
+ *
  * @author Manfred Hantschel
  */
 public class Registry
@@ -67,7 +67,7 @@ public class Registry
 
     /**
      * Registers an service
-     * 
+     *
      * @param type the type
      */
     public static void register(Class<?> type)
@@ -77,7 +77,7 @@ public class Registry
 
     /**
      * Registers an service.
-     * 
+     *
      * @param instance the instance of the service
      */
     public static void register(Object instance)
@@ -131,7 +131,7 @@ public class Registry
             {
                 throw new IllegalArgumentException(
                     String
-                        .format("Failed to instantiate %s. The type is current instantiating. There is a circular dependency."));
+                    .format("Failed to instantiate %s. The type is current instantiating. There is a circular dependency."));
             }
 
             processingTypes.add(type);

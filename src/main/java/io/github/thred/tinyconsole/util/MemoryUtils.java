@@ -4,7 +4,7 @@ import java.io.PrintStream;
 
 /**
  * Common utilities for memory consumption
- * 
+ *
  * @author Manfred Hantschel
  */
 public class MemoryUtils
@@ -12,7 +12,7 @@ public class MemoryUtils
 
     /**
      * Prints the memory usage as used by various commands.
-     * 
+     *
      * @param out the stream
      * @return the free memory
      */

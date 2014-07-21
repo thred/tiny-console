@@ -36,13 +36,13 @@ public class Commands
         List<Command> result = Registry.resolve(Command.class).toList();
 
         Collections.sort(result, new Comparator<Command>()
-        {
+            {
             @Override
             public int compare(Command o1, Command o2)
             {
                 return o1.getOrdinal() - o2.getOrdinal();
             }
-        });
+            });
 
         return result;
     }

@@ -28,7 +28,7 @@ public class Parser
             {
                 case END_OF_FILE:
                     return null;
-                    
+
                 case END_OF_LINE:
                 case SEPARATOR:
                     return new Arguments(tokens);

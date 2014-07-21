@@ -4,7 +4,7 @@ import java.io.IOException;
 
 /**
  * A tokenizer for the shell
- * 
+ *
  * @author Manfred Hantschel
  */
 public class Tokenizer
@@ -87,7 +87,7 @@ public class Tokenizer
             builder.append((char) ch);
 
             ch = scanner.lookAhead();
- 
+
             if ((ch == ' ') || (ch == '\n') || (ch == ';'))
             {
                 return new Token(Token.Type.COMMAND, line, column, builder.toString());

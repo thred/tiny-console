@@ -5,7 +5,7 @@ import java.io.Reader;
 
 /**
  * A scanner for the shell
- * 
+ *
  * @author Manfred Hantschel
  */
 public class Scanner
@@ -91,7 +91,7 @@ public class Scanner
     }
 
     protected int read() throws IOException
-    { 
+    {
         int ch = reader.read();
 
         if ((ch == '\n') && (skipLF))

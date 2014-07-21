@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  * Common utils for Jetty starters.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class Utils
@@ -31,7 +31,7 @@ public class Utils
 
     /**
      * Returns the default value if the value is null
-     * 
+     *
      * @param value the value
      * @param defaultValue the default value
      * @return the value, of the default value if value is null
@@ -43,7 +43,7 @@ public class Utils
 
     /**
      * Repeats the string until the maximum length is reached
-     * 
+     *
      * @param s the string
      * @param maxLength the maximum length
      * @return a string with the maxLength
@@ -62,7 +62,7 @@ public class Utils
 
     /**
      * Prefixes each line with the specified prefix.
-     * 
+     *
      * @param value the text
      * @param prefix the prefix
      * @param includeFirstLine true, to add the prefix at the beginning of the text
@@ -83,7 +83,7 @@ public class Utils
 
     /**
      * Formats seconds in human readable form.
-     * 
+     *
      * @param seconds the seconds
      * @return the formatted seconds
      */
@@ -116,7 +116,7 @@ public class Utils
 
     /**
      * Formats bytes in human readable form.
-     * 
+     *
      * @param bytes the number of bytes
      * @return the formatted bytes
      */
@@ -163,7 +163,7 @@ public class Utils
         if (value > 1024)
         {
             value /= 1024;
-            unit = "EB"; // the Enterprise might still use it. 
+            unit = "EB"; // the Enterprise might still use it.
         }
 
         String result = String.format("%,.1f %s", value, unit);
@@ -178,7 +178,7 @@ public class Utils
 
     /**
      * Writes the content to a file
-     * 
+     *
      * @param file the file
      * @param content the content
      * @throws IOException on occasion
@@ -199,7 +199,7 @@ public class Utils
 
     /**
      * Replaces all placeholders like ${...} by using System.properties and environment variables
-     * 
+     *
      * @param value the value
      * @return the value with resolved placehodlers
      */
@@ -230,7 +230,7 @@ public class Utils
 
     /**
      * Replaces all placeholders like ${...} by using the specified resolver
-     * 
+     *
      * @param value the value
      * @param resolver the resolver
      * @return the value with resolved placehodlers

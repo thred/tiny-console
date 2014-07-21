@@ -3,8 +3,8 @@ package io.github.thred.tinyconsole.command;
 import io.github.thred.tinyconsole.AbstractCommand;
 import io.github.thred.tinyconsole.Command;
 import io.github.thred.tinyconsole.Commands;
-import io.github.thred.tinyconsole.TinyConsole;
 import io.github.thred.tinyconsole.Process;
+import io.github.thred.tinyconsole.TinyConsole;
 import io.github.thred.tinyconsole.util.CommandUtils;
 import io.github.thred.tinyconsole.util.Utils;
 import io.github.thred.tinyconsole.util.WordWrap;
@@ -13,7 +13,7 @@ import java.util.Collection;
 
 /**
  * Prints help.
- * 
+ *
  * @author Manfred Hantschel
  */
 public class HelpCommand extends AbstractCommand
@@ -101,10 +101,9 @@ public class HelpCommand extends AbstractCommand
     {
         process.out.printf("%-" + prefix.length() + "s", CommandUtils.getNameDescriptor(command, true));
 
-        process.out
-            .println(Utils.prefixLine(
-                new WordWrap().perform(command.getDescription(), TinyConsole.getLineLength() - prefix.length()), prefix,
-                false));
+        process.out.println(Utils.prefixLine(
+            new WordWrap().perform(command.getDescription(), TinyConsole.getLineLength() - prefix.length()), prefix,
+            false));
     }
 
     private int showDetailHelp(Process process, String name) throws Exception
