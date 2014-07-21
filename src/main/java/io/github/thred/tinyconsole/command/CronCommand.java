@@ -56,7 +56,7 @@ public class CronCommand extends AbstractCommand
             return addTask(process);
         }
 
-        if (("add".equalsIgnoreCase(command)) || ("a".equalsIgnoreCase(command)))
+        if (("cancel".equalsIgnoreCase(command)) || ("c".equalsIgnoreCase(command)))
         {
             return cancelTask(process);
         }
